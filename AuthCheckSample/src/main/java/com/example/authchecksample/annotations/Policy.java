@@ -1,6 +1,10 @@
-package com.example.demo.annotations;
+package com.example.authchecksample.annotations;
+
+import org.springframework.beans.factory.annotation.Value;
 
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
@@ -23,23 +27,10 @@ import java.lang.annotation.Target;
 
 
 
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)  /** to do    Target을 class로 잡았을 시, 메소드들에 추가한 @과도 동기화가 되는지.
                                  또한, AOP에서 해당 어노테이션이 실행될 때만 실행하게 할 수 있는지. */
 public @interface Policy {
-
-//    Action action();
-//    Resource resource();
-//
-//    enum Action{
-//        create,
-//        delete,
-//        update,
-//        read
-//    }
-//    enum Resource{
-//        user,
-//        cloud
-//    }
 
     String value();
 }

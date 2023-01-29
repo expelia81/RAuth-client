@@ -1,0 +1,11 @@
+server:
+  port: 9099
+spring:
+  rsocket:
+    server:
+      transport: tcp
+      port: 9098
+
+
+secret:
+  key: okestro
